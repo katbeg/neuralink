@@ -1,8 +1,18 @@
-body {
+body, header, nav, main, footer, .footerNav, .leftBlock, .rightBlock, .container  {
+    display: flex;
+}
+
+body, nav, main, .footerNav {
+    flex-direction: column;
+ }
+
+header, footer, .container, .leftBlock, .rightBlock {
+    flex-direction: row;
+ }
+
+body, .info, .title, .block h2, .create {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    display: flex;
-    flex-direction: column;
 }
 
 footer, .footerNav a {
@@ -11,46 +21,26 @@ footer, .footerNav a {
     font-size: 14px;
 }
 
-.footerNav a {
+.blockPhotos, .footerNav a {
     display: block;
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
 }
 
 a:hover {
     text-shadow: 0 0 10px rgba(65, 63, 63, 0.5);
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    padding: 60px;
-    padding-top: 25px;
+nav, .text, .linkText, .overText  {
+    position: absolute;
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
     right: 20px;
     top: 10px;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-}
-
 .block {
     flex-grow: 1;
+    padding: 60px;
 }
 
 a, footer, .linkText {
@@ -71,11 +61,11 @@ h2 {
 
 .header {
     background-color: rgb(180, 189, 203);
+    padding: 25px 60px 60px 60px;
 }
 
 .info {
     font-size: 18px;
-    font-weight: 400; 
     font-size: 18px; 
     padding-top: 20px;
     text-align: left; 
@@ -101,7 +91,6 @@ h2 {
 }
 
 .text {
-    position: absolute;
     top: 200px;
     left: 0;
     width: 100%;
@@ -114,6 +103,7 @@ h2 {
 
 .title {
     font-size: 60px;
+    padding-bottom: 145px;
 }
 
 .navLink {
@@ -137,62 +127,38 @@ h2 {
     margin-left: 60px;
 }
 
-.title {
-    padding-bottom: 145px;
-    font-weight: 400;
-}
-
 .arrow {
     padding-right: 15px;
     padding-left: 5px;
 }
 
-.block {
-    padding: 60px;
-    position: relative;
-}
-
 .block h2 {
     font-size: 41px;
-    font-weight: 400;
     padding-bottom: 40px;
     border-bottom: 2px solid white;
 }
 
-.blockPhotos {
-    display: block;
-}
-
 .linkText {
-    position: absolute;
     bottom: 60px;
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 15px;
-}
-
-.footerNav {
-    display: flex;
-    flex-direction: column;
+    padding: 40px 15px 40px 40px;
 }
 
 .rightBlock {
     width: 50%;
-    display: flex; 
-    flex-direction: row; 
     justify-content: space-around;
 }
 
 input {
     border: none;
     text-transform: uppercase;
+}
+
+input:focus {
+    outline: none;
+    background-color: rgba(209, 210, 211, 0.5);
 }
 
 .emailDiv {
@@ -216,32 +182,29 @@ button:hover {
 }
 
 .logoFooter {
-    width: 50px; height: 30px;
-    padding-top: 20px; padding-right: 40px;
+    width: 50px; 
+    height: 30px;
+    padding-top: 20px; 
+    padding-right: 40px;
 }
 
-.leftBlock {
-    display: flex; 
+.leftBlock, footer {
     justify-content: space-between; 
-    flex-direction: row; 
 }
 
 .overText {
-    position: absolute; 
     top: 20px; 
     left: 20px;
     width: 35%;  
-    padding: 60px; 
-    padding-bottom: 0;
+    padding: 60px 60px 0px 60px; 
 }
 
-.bigSection {
+.bigSection, .block {
     position: relative;
 }
 
 .create {
     border-bottom: 2px solid white; 
     font-size: 40px; 
-    font-weight: 400; 
     padding-bottom: 40px;
 }
